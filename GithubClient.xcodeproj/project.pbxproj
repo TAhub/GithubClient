@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		E42803891BF1459B00174F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42803881BF1459B00174F37 /* AppDelegate.swift */; };
-		E428038B1BF1459B00174F37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428038A1BF1459B00174F37 /* ViewController.swift */; };
 		E428038E1BF1459B00174F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E428038C1BF1459B00174F37 /* Main.storyboard */; };
 		E42803901BF1459B00174F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E428038F1BF1459B00174F37 /* Assets.xcassets */; };
 		E42803931BF1459B00174F37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42803911BF1459B00174F37 /* LaunchScreen.storyboard */; };
+		E428039C1BF1466A00174F37 /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428039B1BF1466A00174F37 /* OAuthClient.swift */; };
+		E428039E1BF1531B00174F37 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428039D1BF1531B00174F37 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E42803851BF1459B00174F37 /* GithubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42803881BF1459B00174F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E428038A1BF1459B00174F37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E428038D1BF1459B00174F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E428038F1BF1459B00174F37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E42803921BF1459B00174F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E42803941BF1459B00174F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E428039B1BF1466A00174F37 /* OAuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthClient.swift; sourceTree = "<group>"; };
+		E428039D1BF1531B00174F37 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		E42803871BF1459B00174F37 /* GithubClient */ = {
 			isa = PBXGroup;
 			children = (
-				E42803881BF1459B00174F37 /* AppDelegate.swift */,
-				E428038A1BF1459B00174F37 /* ViewController.swift */,
+				E428039A1BF145AD00174F37 /* Supporting Files */,
 				E428038C1BF1459B00174F37 /* Main.storyboard */,
+				E428039B1BF1466A00174F37 /* OAuthClient.swift */,
+				E428039D1BF1531B00174F37 /* MainViewController.swift */,
+				E42803881BF1459B00174F37 /* AppDelegate.swift */,
+			);
+			path = GithubClient;
+			sourceTree = "<group>";
+		};
+		E428039A1BF145AD00174F37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				E428038F1BF1459B00174F37 /* Assets.xcassets */,
 				E42803911BF1459B00174F37 /* LaunchScreen.storyboard */,
 				E42803941BF1459B00174F37 /* Info.plist */,
 			);
-			path = GithubClient;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E428038B1BF1459B00174F37 /* ViewController.swift in Sources */,
+				E428039E1BF1531B00174F37 /* MainViewController.swift in Sources */,
+				E428039C1BF1466A00174F37 /* OAuthClient.swift in Sources */,
 				E42803891BF1459B00174F37 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
