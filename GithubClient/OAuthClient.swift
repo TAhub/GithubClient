@@ -89,13 +89,22 @@ class OAuthClient
 	
 	private func saveToken(token:String) -> Bool
 	{
-		NSUserDefaults.standardUserDefaults().setObject(token, forKey: kAccessTokenKey)
-		return NSUserDefaults.standardUserDefaults().synchronize()
+		//defaults-based
+//		NSUserDefaults.standardUserDefaults().setObject(token, forKey: kAccessTokenKey)
+//		return NSUserDefaults.standardUserDefaults().synchronize()
+		
+		//keychain-based
+		KeychainService.save(token)
+		return KeychainService.load() != nil
 	}
 	
 	func accessToken() throws -> String
 	{
-		guard let token = NSUserDefaults.standardUserDefaults().stringForKey(kAccessTokenKey) else
+		//defaults-based
+//		guard let token = NSUserDefaults.standardUserDefaults().stringForKey(kAccessTokenKey) else
+		
+		//keychain-based
+		guard let token = KeychainService.load() as? String else
 		{
 			throw OAuthErrors.MissingAccessToken("ERROR: no access token saved.")
 		}

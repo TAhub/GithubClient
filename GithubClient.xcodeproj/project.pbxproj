@@ -19,6 +19,7 @@
 		E46FF9991BF2A05600E3097D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF9981BF2A05600E3097D /* User.swift */; };
 		E46FF99B1BF2A06300E3097D /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF99A1BF2A06300E3097D /* Owner.swift */; };
 		E46FF9A11BF2A0FC00E3097D /* GithubJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF9A01BF2A0FC00E3097D /* GithubJSONParser.swift */; };
+		E46FF9A31BF2B5B300E3097D /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF9A21BF2B5B300E3097D /* KeychainService.swift */; };
 		E4ED7C751BF297F30062CA1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ED7C741BF297F30062CA1C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		E46FF9981BF2A05600E3097D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E46FF99A1BF2A06300E3097D /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		E46FF9A01BF2A0FC00E3097D /* GithubJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubJSONParser.swift; sourceTree = "<group>"; };
+		E46FF9A21BF2B5B300E3097D /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		E4ED7C741BF297F30062CA1C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 				E46FF9961BF2A04E00E3097D /* Repository.swift */,
 				E46FF9A01BF2A0FC00E3097D /* GithubJSONParser.swift */,
 				E428039F1BF160E700174F37 /* GithubService.swift */,
+				E46FF9A21BF2B5B300E3097D /* KeychainService.swift */,
 				E428039B1BF1466A00174F37 /* OAuthClient.swift */,
 			);
 			name = Model;
@@ -205,6 +208,7 @@
 				E428039E1BF1531B00174F37 /* MainViewController.swift in Sources */,
 				E46FF9951BF29F0100E3097D /* PostTableViewController.swift in Sources */,
 				E428039C1BF1466A00174F37 /* OAuthClient.swift in Sources */,
+				E46FF9A31BF2B5B300E3097D /* KeychainService.swift in Sources */,
 				E46FF99B1BF2A06300E3097D /* Owner.swift in Sources */,
 				E46FF9991BF2A05600E3097D /* User.swift in Sources */,
 				E42803A01BF160E700174F37 /* GithubService.swift in Sources */,
