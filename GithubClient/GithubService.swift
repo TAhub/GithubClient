@@ -24,7 +24,6 @@ class GithubService
 				let request = NSMutableURLRequest(URL: URL)
 				request.HTTPMethod = "GET"
 				
-//				session.dataTaskWithURL(URL, completionHandler:
 				session.dataTaskWithRequest(request, completionHandler:
 				{ (data, response, error) in
 					if let error = error

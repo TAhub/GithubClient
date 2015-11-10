@@ -30,8 +30,8 @@ class OAuthClient
 	
 	func oauthRequest(parameters: [String : String])
 	{
-		let parameterString:String = parameters.reduce("") { "\($0)\($1.1)" }
-		if let requestURL = NSURL(string: "\(kOAuthBaseURLString)authorize?client_id=\(self.githubClientId)&scope=\(parameterString)")
+		let parameterString:String = parameters.reduce("") { "\($0)&\($1.0)=\($1.1)" }
+		if let requestURL = NSURL(string: "\(kOAuthBaseURLString)authorize?client_id=\(self.githubClientId)\(parameterString)")
 		{
 			UIApplication.sharedApplication().openURL(requestURL)
 		}

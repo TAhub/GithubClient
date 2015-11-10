@@ -26,6 +26,7 @@
 		E428039B1BF1466A00174F37 /* OAuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthClient.swift; sourceTree = "<group>"; };
 		E428039D1BF1531B00174F37 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E428039F1BF160E700174F37 /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		E42803A11BF16FBB00174F37 /* W3D1Challenge.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = W3D1Challenge.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 				E428039F1BF160E700174F37 /* GithubService.swift */,
 				E428039D1BF1531B00174F37 /* MainViewController.swift */,
 				E42803881BF1459B00174F37 /* AppDelegate.swift */,
+				E42803A11BF16FBB00174F37 /* W3D1Challenge.playground */,
 			);
 			path = GithubClient;
 			sourceTree = "<group>";
