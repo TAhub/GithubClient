@@ -5,6 +5,37 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="kCN-Dp-4VO">
+            <objects>
+                <viewController storyboardIdentifier="LoginController" id="Sv4-nj-CT5" customClass="LoginViewController" customModule="GithubClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fl3-bv-QcE"/>
+                        <viewControllerLayoutGuide type="bottom" id="oGY-k4-cZo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nx3-3k-d7O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADT-4y-QM9">
+                                <rect key="frame" x="248" y="285" width="105" height="30"/>
+                                <state key="normal" title="Login to Github"/>
+                                <connections>
+                                    <action selector="loginToGithub" destination="Sv4-nj-CT5" eventType="touchUpInside" id="1iA-AN-mWn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ADT-4y-QM9" firstAttribute="centerY" secondItem="Nx3-3k-d7O" secondAttribute="centerY" id="NdN-os-i5U"/>
+                            <constraint firstItem="ADT-4y-QM9" firstAttribute="centerX" secondItem="Nx3-3k-d7O" secondAttribute="centerX" id="qtT-MD-Mva"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Xz-PU-osG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1278" y="242"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,34 +48,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5h-z1-evA">
-                                <rect key="frame" x="249" y="285" width="102" height="30"/>
-                                <state key="normal" title="Request Token"/>
-                                <connections>
-                                    <action selector="requestToken" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBZ-ES-WFS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd0-qk-vGb">
-                                <rect key="frame" x="261" y="323" width="78" height="30"/>
-                                <state key="normal" title="Print Token"/>
-                                <connections>
-                                    <action selector="printToken" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zo3-34-oxW"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Term" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3C-iX-c71">
-                                <rect key="frame" x="249" y="247" width="103" height="30"/>
+                                <rect key="frame" x="249" y="285" width="103" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="k5h-z1-evA" firstAttribute="top" secondItem="c3C-iX-c71" secondAttribute="bottom" constant="8" symbolic="YES" id="5YY-uG-wLh"/>
-                            <constraint firstItem="rd0-qk-vGb" firstAttribute="centerX" secondItem="k5h-z1-evA" secondAttribute="centerX" id="Uvh-aD-s8c"/>
-                            <constraint firstItem="k5h-z1-evA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YuC-fa-pZh"/>
-                            <constraint firstItem="k5h-z1-evA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ayr-I7-eQH"/>
-                            <constraint firstItem="c3C-iX-c71" firstAttribute="centerX" secondItem="k5h-z1-evA" secondAttribute="centerX" id="gHj-uq-xVe"/>
-                            <constraint firstItem="rd0-qk-vGb" firstAttribute="top" secondItem="k5h-z1-evA" secondAttribute="bottom" constant="8" symbolic="YES" id="ssJ-HP-veB"/>
+                            <constraint firstItem="c3C-iX-c71" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NLk-SL-Ehn"/>
+                            <constraint firstItem="c3C-iX-c71" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VX8-dv-E5I"/>
                         </constraints>
                     </view>
                     <connections>
@@ -53,6 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2130" y="341"/>
         </scene>
     </scenes>
 </document>

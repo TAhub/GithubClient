@@ -10,24 +10,6 @@ import UIKit
 
 class MainViewController: UIViewController, UITextFieldDelegate {
 
-	@IBAction func requestToken()
-	{
-		OAuthClient.shared.oauthRequest(["scope" : "email,user"])
-	}
-	
-	@IBAction func printToken()
-	{
-		do
-		{
-			let token = try OAuthClient.shared.accessToken()
-			print(token)
-		}
-		catch let error
-		{
-			print(error)
-		}
-	}
-	
 	@IBOutlet weak var searchBox: UITextField!
 	{
 		didSet

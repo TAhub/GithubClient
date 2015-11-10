@@ -15,7 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		// Override point for customization after application launch.
+
+		do
+		{
+			try OAuthClient.shared.accessToken()
+		}
+		catch _
+		{
+			//you don't have a token, so go to the login screen
+			let storyboard = UIStoryboard(name: "Main", bundle: nil)
+			let controller = storyboard.instantiateViewControllerWithIdentifier("LoginController")
+			window!.rootViewController = controller
+		}
+		
 		return true
 	}
 	
@@ -33,6 +45,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 				print("Failed to retrieve token.")
 			}
 		}
+		
+		//you're done logging in, so redirect to the real initial view controller
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let controller = storyboard.instantiateInitialViewController()
+		window!.rootViewController = controller
 		
 		return true
 	}
