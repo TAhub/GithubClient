@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITextFieldDelegate {
 
 	@IBAction func requestToken()
 	{
@@ -28,4 +28,34 @@ class MainViewController: UIViewController {
 		}
 	}
 	
+	@IBOutlet weak var searchBox: UITextField!
+	{
+		didSet
+		{
+			searchBox.delegate = self
+		}
+	}
+	
+	func textFieldShouldReturn(textField: UITextField) -> Bool
+	{
+		//search for the given thing
+		GithubService.fetchRepositories(textField.text!)
+		{ (error, results) in
+			if let error = error
+			{
+				print(error)
+			}
+			else
+			{
+				print(results)
+			}
+		}
+		
+		return true
+	}
+	
+	func textFieldDidEndEditing(textField: UITextField)
+	{
+		textField.resignFirstResponder()
+	}
 }

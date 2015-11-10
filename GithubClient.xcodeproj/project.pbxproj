@@ -13,6 +13,7 @@
 		E42803931BF1459B00174F37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42803911BF1459B00174F37 /* LaunchScreen.storyboard */; };
 		E428039C1BF1466A00174F37 /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428039B1BF1466A00174F37 /* OAuthClient.swift */; };
 		E428039E1BF1531B00174F37 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428039D1BF1531B00174F37 /* MainViewController.swift */; };
+		E42803A01BF160E700174F37 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428039F1BF160E700174F37 /* GithubService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E42803941BF1459B00174F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E428039B1BF1466A00174F37 /* OAuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthClient.swift; sourceTree = "<group>"; };
 		E428039D1BF1531B00174F37 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E428039F1BF160E700174F37 /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E428039A1BF145AD00174F37 /* Supporting Files */,
 				E428038C1BF1459B00174F37 /* Main.storyboard */,
 				E428039B1BF1466A00174F37 /* OAuthClient.swift */,
+				E428039F1BF160E700174F37 /* GithubService.swift */,
 				E428039D1BF1531B00174F37 /* MainViewController.swift */,
 				E42803881BF1459B00174F37 /* AppDelegate.swift */,
 			);
@@ -148,6 +151,7 @@
 			files = (
 				E428039E1BF1531B00174F37 /* MainViewController.swift in Sources */,
 				E428039C1BF1466A00174F37 /* OAuthClient.swift in Sources */,
+				E42803A01BF160E700174F37 /* GithubService.swift in Sources */,
 				E42803891BF1459B00174F37 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5h-z1-evA">
-                                <rect key="frame" x="249" y="286" width="102" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5h-z1-evA">
+                                <rect key="frame" x="249" y="285" width="102" height="30"/>
                                 <state key="normal" title="Request Token"/>
                                 <connections>
                                     <action selector="requestToken" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBZ-ES-WFS"/>
@@ -31,15 +31,25 @@
                                     <action selector="printToken" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zo3-34-oxW"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Term" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3C-iX-c71">
+                                <rect key="frame" x="249" y="247" width="103" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="k5h-z1-evA" firstAttribute="top" secondItem="c3C-iX-c71" secondAttribute="bottom" constant="8" symbolic="YES" id="5YY-uG-wLh"/>
                             <constraint firstItem="rd0-qk-vGb" firstAttribute="centerX" secondItem="k5h-z1-evA" secondAttribute="centerX" id="Uvh-aD-s8c"/>
                             <constraint firstItem="k5h-z1-evA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YuC-fa-pZh"/>
                             <constraint firstItem="k5h-z1-evA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ayr-I7-eQH"/>
+                            <constraint firstItem="c3C-iX-c71" firstAttribute="centerX" secondItem="k5h-z1-evA" secondAttribute="centerX" id="gHj-uq-xVe"/>
                             <constraint firstItem="rd0-qk-vGb" firstAttribute="top" secondItem="k5h-z1-evA" secondAttribute="bottom" constant="8" symbolic="YES" id="ssJ-HP-veB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBox" destination="c3C-iX-c71" id="WiF-11-FuV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
