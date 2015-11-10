@@ -12,6 +12,6 @@ class LoginViewController: UIViewController {
 
 	@IBAction func loginToGithub()
 	{
-		OAuthClient.shared.oauthRequest(["scope" : "email,user"])
+		OAuthClient.shared.oauthRequest(["scope" : "user,repo"])
 	}
 }

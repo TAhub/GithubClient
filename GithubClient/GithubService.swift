@@ -10,7 +10,12 @@ import UIKit
 
 class GithubService
 {
-	class func fetchRepositories(searchTerm:String, completion:(String?, [String]?)->())
+	class func postRepository()
+	{
+		
+	}
+	
+	class func fetchRepositories(searchTerm:String, completion:(String?, [Repository]?)->())
 	{
 		do
 		{
@@ -37,7 +42,7 @@ class GithubService
 					{
 						NSOperationQueue.mainQueue().addOperationWithBlock()
 						{
-							completion(nil, reposFromJSON(data)!)
+							completion(nil, GithubJSONParser.reposFromNSData(data)!)
 						}
 					}
 				}).resume()
@@ -47,33 +52,5 @@ class GithubService
 		{
 			completion("\(error)", nil)
 		}
-	}
-	
-	//MARK: JSON
-	class func reposFromJSON(json: NSData) -> [String]?
-	{
-		do
-		{
-			if let rootObject = try NSJSONSerialization.JSONObjectWithData(json, options: NSJSONReadingOptions.MutableContainers) as? [String : AnyObject]
-			{
-				if let items = rootObject["items"] as? [[String: AnyObject]]
-				{
-					var repos = [String]()
-					for item in items
-					{
-						if let name = item["name"] as? String
-						{
-							repos.append(name)
-						}
-					}
-					return repos
-				}
-			}
-		}
-		catch
-		{
-			//there was an exception
-		}
-		return nil
 	}
 }

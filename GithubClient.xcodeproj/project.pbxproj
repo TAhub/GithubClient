@@ -14,6 +14,11 @@
 		E428039C1BF1466A00174F37 /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428039B1BF1466A00174F37 /* OAuthClient.swift */; };
 		E428039E1BF1531B00174F37 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428039D1BF1531B00174F37 /* MainViewController.swift */; };
 		E42803A01BF160E700174F37 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428039F1BF160E700174F37 /* GithubService.swift */; };
+		E46FF9951BF29F0100E3097D /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF9941BF29F0100E3097D /* PostTableViewController.swift */; };
+		E46FF9971BF2A04E00E3097D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF9961BF2A04E00E3097D /* Repository.swift */; };
+		E46FF9991BF2A05600E3097D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF9981BF2A05600E3097D /* User.swift */; };
+		E46FF99B1BF2A06300E3097D /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF99A1BF2A06300E3097D /* Owner.swift */; };
+		E46FF9A11BF2A0FC00E3097D /* GithubJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF9A01BF2A0FC00E3097D /* GithubJSONParser.swift */; };
 		E4ED7C751BF297F30062CA1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ED7C741BF297F30062CA1C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +33,11 @@
 		E428039D1BF1531B00174F37 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E428039F1BF160E700174F37 /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		E42803A11BF16FBB00174F37 /* W3D1Challenge.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = W3D1Challenge.playground; sourceTree = "<group>"; };
+		E46FF9941BF29F0100E3097D /* PostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		E46FF9961BF2A04E00E3097D /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		E46FF9981BF2A05600E3097D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E46FF99A1BF2A06300E3097D /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		E46FF9A01BF2A0FC00E3097D /* GithubJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubJSONParser.swift; sourceTree = "<group>"; };
 		E4ED7C741BF297F30062CA1C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,14 +71,11 @@
 		E42803871BF1459B00174F37 /* GithubClient */ = {
 			isa = PBXGroup;
 			children = (
+				E46FF99F1BF2A0B800E3097D /* Challenges */,
 				E428039A1BF145AD00174F37 /* Supporting Files */,
-				E428038C1BF1459B00174F37 /* Main.storyboard */,
-				E4ED7C741BF297F30062CA1C /* LoginViewController.swift */,
-				E428039D1BF1531B00174F37 /* MainViewController.swift */,
-				E428039B1BF1466A00174F37 /* OAuthClient.swift */,
-				E428039F1BF160E700174F37 /* GithubService.swift */,
-				E42803881BF1459B00174F37 /* AppDelegate.swift */,
-				E42803A11BF16FBB00174F37 /* W3D1Challenge.playground */,
+				E46FF99C1BF2A07F00E3097D /* Model */,
+				E46FF99E1BF2A08700E3097D /* Controller */,
+				E46FF99D1BF2A08300E3097D /* View */,
 			);
 			path = GithubClient;
 			sourceTree = "<group>";
@@ -81,6 +88,46 @@
 				E42803941BF1459B00174F37 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E46FF99C1BF2A07F00E3097D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E46FF9981BF2A05600E3097D /* User.swift */,
+				E46FF99A1BF2A06300E3097D /* Owner.swift */,
+				E46FF9961BF2A04E00E3097D /* Repository.swift */,
+				E46FF9A01BF2A0FC00E3097D /* GithubJSONParser.swift */,
+				E428039F1BF160E700174F37 /* GithubService.swift */,
+				E428039B1BF1466A00174F37 /* OAuthClient.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E46FF99D1BF2A08300E3097D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E428038C1BF1459B00174F37 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E46FF99E1BF2A08700E3097D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4ED7C741BF297F30062CA1C /* LoginViewController.swift */,
+				E46FF9941BF29F0100E3097D /* PostTableViewController.swift */,
+				E428039D1BF1531B00174F37 /* MainViewController.swift */,
+				E42803881BF1459B00174F37 /* AppDelegate.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E46FF99F1BF2A0B800E3097D /* Challenges */ = {
+			isa = PBXGroup;
+			children = (
+				E42803A11BF16FBB00174F37 /* W3D1Challenge.playground */,
+			);
+			name = Challenges;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,11 +201,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46FF9971BF2A04E00E3097D /* Repository.swift in Sources */,
 				E428039E1BF1531B00174F37 /* MainViewController.swift in Sources */,
+				E46FF9951BF29F0100E3097D /* PostTableViewController.swift in Sources */,
 				E428039C1BF1466A00174F37 /* OAuthClient.swift in Sources */,
+				E46FF99B1BF2A06300E3097D /* Owner.swift in Sources */,
+				E46FF9991BF2A05600E3097D /* User.swift in Sources */,
 				E42803A01BF160E700174F37 /* GithubService.swift in Sources */,
 				E4ED7C751BF297F30062CA1C /* LoginViewController.swift in Sources */,
 				E42803891BF1459B00174F37 /* AppDelegate.swift in Sources */,
+				E46FF9A11BF2A0FC00E3097D /* GithubJSONParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
