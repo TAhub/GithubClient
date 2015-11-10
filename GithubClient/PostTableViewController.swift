@@ -17,9 +17,14 @@ class PostTableViewController: UITableViewController {
 	{
 		if !nameText.text!.isEmpty
 		{
-			//TODO: post
-			
-			reset()
+			GithubService.postRepository(nameText.text!, description: descriptionText.text ?? "")
+			{ (error) in
+				if let error = error
+				{
+					print(error)
+				}
+				self.reset()
+			}
 		}
 	}
 	
