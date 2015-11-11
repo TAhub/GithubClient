@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
 	{
 		didSet
 		{
-			messageLabel.text = label
+			messageLabel.text = message
 		}
 	}
 
