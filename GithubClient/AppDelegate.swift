@@ -38,18 +38,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		{ (success) in
 			if success
 			{
-				print("Token retrieved successfully!")
+				//you're done logging in, so redirect to the real initial view controller
+				let storyboard = UIStoryboard(name: "Main", bundle: nil)
+				let controller = storyboard.instantiateInitialViewController()
+				self.window!.rootViewController = controller
 			}
 			else
 			{
-				print("Failed to retrieve token.")
+				//set the message in the login screen to show you failed
+				if let loginScreen = self.window!.rootViewController as? LoginViewController
+				{
+					loginScreen.message = "Failed to retrieve a token. Sorry, you can't go on!"
+				}
 			}
 		}
-		
-		//you're done logging in, so redirect to the real initial view controller
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let controller = storyboard.instantiateInitialViewController()
-		window!.rootViewController = controller
 		
 		return true
 	}

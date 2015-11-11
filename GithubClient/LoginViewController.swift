@@ -9,6 +9,15 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+	@IBOutlet weak var messageLabel: UILabel!
+	
+	var message:String?
+	{
+		didSet
+		{
+			messageLabel.text = label
+		}
+	}
 
 	@IBAction func loginToGithub()
 	{
