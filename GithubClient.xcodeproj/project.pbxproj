@@ -20,6 +20,9 @@
 		E46FF99B1BF2A06300E3097D /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF99A1BF2A06300E3097D /* Owner.swift */; };
 		E46FF9A11BF2A0FC00E3097D /* GithubJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF9A01BF2A0FC00E3097D /* GithubJSONParser.swift */; };
 		E46FF9A31BF2B5B300E3097D /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF9A21BF2B5B300E3097D /* KeychainService.swift */; };
+		E4D9B85A1BF3D0D300C43229 /* snowflake1.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8571BF3D0D300C43229 /* snowflake1.png */; };
+		E4D9B85B1BF3D0D300C43229 /* snowflake2.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8581BF3D0D300C43229 /* snowflake2.png */; };
+		E4D9B85C1BF3D0D300C43229 /* snowflake3.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8591BF3D0D300C43229 /* snowflake3.png */; };
 		E4ED7C751BF297F30062CA1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ED7C741BF297F30062CA1C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		E46FF99A1BF2A06300E3097D /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		E46FF9A01BF2A0FC00E3097D /* GithubJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubJSONParser.swift; sourceTree = "<group>"; };
 		E46FF9A21BF2B5B300E3097D /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		E4D9B8571BF3D0D300C43229 /* snowflake1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake1.png; sourceTree = "<group>"; };
+		E4D9B8581BF3D0D300C43229 /* snowflake2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake2.png; sourceTree = "<group>"; };
+		E4D9B8591BF3D0D300C43229 /* snowflake3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake3.png; sourceTree = "<group>"; };
 		E4ED7C741BF297F30062CA1C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +92,9 @@
 				E428038F1BF1459B00174F37 /* Assets.xcassets */,
 				E42803911BF1459B00174F37 /* LaunchScreen.storyboard */,
 				E42803941BF1459B00174F37 /* Info.plist */,
+				E4D9B8571BF3D0D300C43229 /* snowflake1.png */,
+				E4D9B8581BF3D0D300C43229 /* snowflake2.png */,
+				E4D9B8591BF3D0D300C43229 /* snowflake3.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -181,8 +190,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D9B85C1BF3D0D300C43229 /* snowflake3.png in Resources */,
+				E4D9B85A1BF3D0D300C43229 /* snowflake1.png in Resources */,
 				E42803931BF1459B00174F37 /* LaunchScreen.storyboard in Resources */,
 				E42803901BF1459B00174F37 /* Assets.xcassets in Resources */,
+				E4D9B85B1BF3D0D300C43229 /* snowflake2.png in Resources */,
 				E428038E1BF1459B00174F37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
