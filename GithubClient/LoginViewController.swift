@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
 		{
 			while (!self.killFlakes)
 			{
-				usleep(11000)
+				usleep(33000)
 				dispatch_async(dispatch_get_main_queue())
 				{
 					self.addSnowflake()
@@ -84,14 +84,16 @@ class LoginViewController: UIViewController {
 		//get the properties of the animation
 		let xStart = CGFloat(arc4random_uniform(90)) * 0.02 + 0.1
 		let duration = 6.5
-		let rotateDirection:CGFloat = (arc4random_uniform(2) == 1 ? -1 : 1)
+		let rotateConst:CGFloat = CGFloat(arc4random_uniform(360))
+		let rotateConst2:CGFloat = CGFloat(arc4random_uniform(360))
 		
 		//position the snowflake
 		//I tried to do this with constraints earlier, but it wasn't working
 		//while doing it with positions takes like three lines of code and works perfectly
 		//it just looks weird if you rotate the screen
 		snowflake.center.x = xStart * self.view.bounds.width
-		snowflake.center.y = 0
+		snowflake.center.y = -30
+		snowflake.transform = CGAffineTransformMakeRotation((rotateConst2 * CGFloat(M_PI)) / 180.0)
 		
 		//finally, add the animation
 		UIView.animateWithDuration(duration, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations:
@@ -99,7 +101,7 @@ class LoginViewController: UIViewController {
 			snowflake.center.y = self.view.bounds.height + 20
 
 			//rotate it, in addition to moving it
-			snowflake.transform = CGAffineTransformMakeRotation((rotateDirection * 180 * CGFloat(M_PI)) / 180.0)
+			snowflake.transform = CGAffineTransformMakeRotation((rotateConst * CGFloat(M_PI)) / 180.0)
 		})
 		{ (success) in
 			
