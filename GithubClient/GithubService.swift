@@ -28,7 +28,7 @@ class GithubService
 				request.HTTPMethod = "POST"
 				
 				//add http body
-				request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(["name":name, "description":description], options: NSJSONWritingOptions())
+				request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(["name":name, "description":description], options: NSJSONWritingOptions.PrettyPrinted)
 				
 				session.dataTaskWithRequest(request, completionHandler:
 				{ (data, response, error) in

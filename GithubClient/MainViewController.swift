@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITextFieldDelegate {
+class MainViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource {
 
 	@IBOutlet weak var searchBox: UITextField!
 	{
@@ -18,8 +18,31 @@ class MainViewController: UIViewController, UITextFieldDelegate {
 		}
 	}
 	
+	@IBOutlet weak var table: UITableView!
+	{
+		didSet
+		{
+			table.dataSource = self
+		}
+	}
+	
+	private var searchResults = [Repository]()
+	{
+		didSet
+		{
+			if table != nil
+			{
+				table.reloadData()
+			}
+		}
+	}
+	
+	@IBOutlet var spinner: UIActivityIndicatorView!
+	
 	func textFieldShouldReturn(textField: UITextField) -> Bool
 	{
+		spinner.startAnimating()
+		
 		//search for the given thing
 		GithubService.fetchRepositories(textField.text!)
 		{ (error, results) in
@@ -29,8 +52,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
 			}
 			else
 			{
-				print(results)
+				self.searchResults = results ?? [Repository]()
 			}
+			self.spinner.stopAnimating()
 		}
 		
 		return true
@@ -39,5 +63,18 @@ class MainViewController: UIViewController, UITextFieldDelegate {
 	func textFieldDidEndEditing(textField: UITextField)
 	{
 		textField.resignFirstResponder()
+	}
+	
+	//MARK: table view data source
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+	{
+		let cell = table.dequeueReusableCellWithIdentifier("repoCell")!
+		cell.textLabel!.text = searchResults[indexPath.row].name
+		cell.detailTextLabel!.text = searchResults[indexPath.row].url
+		return cell
+	}
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+	{
+		return searchResults.count
 	}
 }
