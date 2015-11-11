@@ -21,6 +21,7 @@
 		E46FF9A11BF2A0FC00E3097D /* GithubJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF9A01BF2A0FC00E3097D /* GithubJSONParser.swift */; };
 		E46FF9A31BF2B5B300E3097D /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FF9A21BF2B5B300E3097D /* KeychainService.swift */; };
 		E47A6FCC1BF3E54700136715 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47A6FCB1BF3E54700136715 /* HomeTableViewController.swift */; };
+		E47A6FCE1BF3EDE700136715 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47A6FCD1BF3EDE700136715 /* ProfileViewController.swift */; };
 		E4D9B85A1BF3D0D300C43229 /* snowflake1.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8571BF3D0D300C43229 /* snowflake1.png */; };
 		E4D9B85B1BF3D0D300C43229 /* snowflake2.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8581BF3D0D300C43229 /* snowflake2.png */; };
 		E4D9B85C1BF3D0D300C43229 /* snowflake3.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8591BF3D0D300C43229 /* snowflake3.png */; };
@@ -44,6 +45,7 @@
 		E46FF9A01BF2A0FC00E3097D /* GithubJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubJSONParser.swift; sourceTree = "<group>"; };
 		E46FF9A21BF2B5B300E3097D /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		E47A6FCB1BF3E54700136715 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		E47A6FCD1BF3EDE700136715 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E4D9B8571BF3D0D300C43229 /* snowflake1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake1.png; sourceTree = "<group>"; };
 		E4D9B8581BF3D0D300C43229 /* snowflake2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake2.png; sourceTree = "<group>"; };
 		E4D9B8591BF3D0D300C43229 /* snowflake3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake3.png; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		E46FF99E1BF2A08700E3097D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E47A6FCD1BF3EDE700136715 /* ProfileViewController.swift */,
 				E47A6FCB1BF3E54700136715 /* HomeTableViewController.swift */,
 				E4ED7C741BF297F30062CA1C /* LoginViewController.swift */,
 				E46FF9941BF29F0100E3097D /* PostTableViewController.swift */,
@@ -219,6 +222,7 @@
 				E46FF9991BF2A05600E3097D /* User.swift in Sources */,
 				E42803A01BF160E700174F37 /* GithubService.swift in Sources */,
 				E4ED7C751BF297F30062CA1C /* LoginViewController.swift in Sources */,
+				E47A6FCE1BF3EDE700136715 /* ProfileViewController.swift in Sources */,
 				E42803891BF1459B00174F37 /* AppDelegate.swift in Sources */,
 				E46FF9A11BF2A0FC00E3097D /* GithubJSONParser.swift in Sources */,
 			);

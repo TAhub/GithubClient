@@ -10,6 +10,22 @@ import Foundation
 
 class GithubJSONParser
 {
+	class func userFromNSData(data: NSData) -> User?
+	{
+		do
+		{
+			if let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? [String : AnyObject]
+			{
+				return userFromJSON(json)
+			}
+		}
+		catch
+		{
+			//there was an exception
+		}
+		return nil
+	}
+	
 	class func reposFromNSData(data: NSData) -> [Repository]?
 	{
 		do
@@ -44,6 +60,15 @@ class GithubJSONParser
 		catch
 		{
 			//there was an exception
+		}
+		return nil
+	}
+	
+	class func userFromJSON(json: [String : AnyObject]) -> User?
+	{
+		if let name = json["login"] as? String, let avatar = json["avatar_url"] as? String, let created = json["created_at"] as? String, let following = json["following"] as? Int, let followers = json["followers"] as? Int
+		{
+			return User(name: name, avatar: avatar, followers: followers, starred: 0, following: following, created: created)
 		}
 		return nil
 	}

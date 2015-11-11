@@ -10,6 +10,10 @@ import Foundation
 
 struct User
 {
-	//TODO: put stuff here I guess
-	//I don't know what I'm using User for yet so I don't know what to put here yet
+	var name:String
+	var avatar:String
+	var followers:Int
+	var starred:Int
+	var following:Int
+	var created:String
 }
