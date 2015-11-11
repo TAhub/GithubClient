@@ -14,20 +14,31 @@ class GithubJSONParser
 	{
 		do
 		{
-			if let rootObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? [String : AnyObject]
+			//this syntax is kind of weird
+			//because there are multiple different formats they use for passing back repositories
+			//depending on if you search, or look at a user's results
+			let deserialized = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
+			var rootObject:[[String : AnyObject]]?
+			if let rootObjectDict = deserialized as? [String : AnyObject], let rootObjectDictArray = rootObjectDict["items"] as? [[String : AnyObject]]
 			{
-				if let items = rootObject["items"] as? [[String: AnyObject]]
+				rootObject = rootObjectDictArray
+			}
+			else if let rootObjectArray = deserialized as? [[String : AnyObject]]
+			{
+				rootObject = rootObjectArray
+			}
+			
+			if let rootObject = rootObject
+			{
+				var repos = [Repository]()
+				for item in rootObject
 				{
-					var repos = [Repository]()
-					for item in items
+					if let repo = repoFromJSON(item)
 					{
-						if let repo = repoFromJSON(item)
-						{
-							repos.append(repo)
-						}
+						repos.append(repo)
 					}
-					return repos
 				}
+				return repos
 			}
 		}
 		catch

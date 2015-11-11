@@ -8,15 +8,16 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource {
 
-	@IBOutlet weak var searchBox: UITextField!
+	@IBOutlet weak var searchBox: UISearchBar!
 	{
 		didSet
 		{
 			searchBox.delegate = self
 		}
 	}
+	
 	
 	@IBOutlet weak var table: UITableView!
 	{
@@ -38,13 +39,13 @@ class MainViewController: UIViewController, UITextFieldDelegate, UITableViewData
 	}
 	
 	@IBOutlet var spinner: UIActivityIndicatorView!
-	
-	func textFieldShouldReturn(textField: UITextField) -> Bool
+
+	func searchBarSearchButtonClicked(searchBar: UISearchBar)
 	{
 		spinner.startAnimating()
 		
 		//search for the given thing
-		GithubService.fetchRepositories(textField.text!)
+		GithubService.fetchRepositories(searchBar.text!)
 		{ (error, results) in
 			if let error = error
 			{
@@ -56,13 +57,11 @@ class MainViewController: UIViewController, UITextFieldDelegate, UITableViewData
 			}
 			self.spinner.stopAnimating()
 		}
-		
-		return true
 	}
 	
-	func textFieldDidEndEditing(textField: UITextField)
+	func searchBarTextDidEndEditing(searchBar: UISearchBar)
 	{
-		textField.resignFirstResponder()
+		searchBar.resignFirstResponder()
 	}
 	
 	//MARK: table view data source
@@ -70,7 +69,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, UITableViewData
 	{
 		let cell = table.dequeueReusableCellWithIdentifier("repoCell")!
 		cell.textLabel!.text = searchResults[indexPath.row].name
-		cell.detailTextLabel!.text = searchResults[indexPath.row].url
+		cell.detailTextLabel!.text = searchResults[indexPath.row].owner.login
 		return cell
 	}
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
