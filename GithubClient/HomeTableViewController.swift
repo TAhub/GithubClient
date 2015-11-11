@@ -12,6 +12,8 @@ class HomeTableViewController: UITableViewController {
 
 	@IBOutlet weak var spinner: UIActivityIndicatorView!
 	
+	
+	
 	override func viewWillAppear(animated: Bool)
 	{
 		super.viewWillAppear(animated)

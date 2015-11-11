@@ -24,10 +24,7 @@ class LoginViewController: UIViewController {
 		didSet
 		{
 			//give the login button a pretty border
-			loginButton.layer.backgroundColor = UIColor.whiteColor().CGColor
-			loginButton.layer.borderWidth = 10.0
-			loginButton.layer.borderColor = UIColor.whiteColor().CGColor
-			loginButton.layer.cornerRadius = 10
+			loginButton.winterBorder()
 		}
 	}
 

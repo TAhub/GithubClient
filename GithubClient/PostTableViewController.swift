@@ -14,6 +14,22 @@ class PostTableViewController: UITableViewController {
 	@IBOutlet weak var descriptionText: UITextField!
 	@IBOutlet weak var spinner: UIActivityIndicatorView!
 	
+	@IBOutlet weak var postButton: UIButton!
+	{
+		didSet
+		{
+			postButton.winterBorder()
+		}
+	}
+	
+	@IBOutlet weak var resetButton: UIButton!
+	{
+		didSet
+		{
+			resetButton.winterBorder()
+		}
+	}
+	
 	@IBAction func post()
 	{
 		if !nameText.text!.isEmpty
