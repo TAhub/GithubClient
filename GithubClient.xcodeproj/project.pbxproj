@@ -33,7 +33,7 @@
 		E428039B1BF1466A00174F37 /* OAuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthClient.swift; sourceTree = "<group>"; };
 		E428039D1BF1531B00174F37 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E428039F1BF160E700174F37 /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
-		E42803A11BF16FBB00174F37 /* W3D1Challenge.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = W3D1Challenge.playground; sourceTree = "<group>"; };
+		E434425F1BF2BD8100CCE425 /* W3D1Challenge.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = W3D1Challenge.playground; sourceTree = "<group>"; };
 		E46FF9941BF29F0100E3097D /* PostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 		E46FF9961BF2A04E00E3097D /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		E46FF9981BF2A05600E3097D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		E46FF99F1BF2A0B800E3097D /* Challenges */ = {
 			isa = PBXGroup;
 			children = (
-				E42803A11BF16FBB00174F37 /* W3D1Challenge.playground */,
+				E434425F1BF2BD8100CCE425 /* W3D1Challenge.playground */,
 				E46FF9A41BF2BD1A00E3097D /* W3D2Challenge.playground */,
 			);
 			name = Challenges;
