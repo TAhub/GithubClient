@@ -139,6 +139,24 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cbe-6Y-kbT" id="0FK-wa-Yhn">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9WD-sQ-ruX">
+                                                    <rect key="frame" x="290" y="12" width="20" height="20"/>
+                                                    <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9WD-sQ-ruX" firstAttribute="top" secondItem="0FK-wa-Yhn" secondAttribute="topMargin" id="1R3-ml-9Q7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="9WD-sQ-ruX" secondAttribute="bottom" id="PVM-2Z-kdJ"/>
+                                                <constraint firstItem="9WD-sQ-ruX" firstAttribute="centerX" secondItem="0FK-wa-Yhn" secondAttribute="centerX" id="k36-I0-dRc"/>
+                                                <constraint firstItem="9WD-sQ-ruX" firstAttribute="centerY" secondItem="0FK-wa-Yhn" secondAttribute="centerY" id="vXf-Ls-B89"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="1R3-ml-9Q7"/>
+                                                    <exclude reference="PVM-2Z-kdJ"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dsG-kC-h67">
@@ -240,6 +258,7 @@
                     <connections>
                         <outlet property="descriptionText" destination="eyE-Jt-mwd" id="Rx3-1h-CSr"/>
                         <outlet property="nameText" destination="DQu-34-D2y" id="rZm-lG-duT"/>
+                        <outlet property="spinner" destination="9WD-sQ-ruX" id="Ss3-nB-vub"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hxc-rZ-4bC" userLabel="First Responder" sceneMemberID="firstResponder"/>

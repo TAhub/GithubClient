@@ -12,11 +12,13 @@ class PostTableViewController: UITableViewController {
 
 	@IBOutlet weak var nameText: UITextField!
 	@IBOutlet weak var descriptionText: UITextField!
+	@IBOutlet weak var spinner: UIActivityIndicatorView!
 	
 	@IBAction func post()
 	{
 		if !nameText.text!.isEmpty
 		{
+			spinner.startAnimating()
 			GithubService.postRepository(nameText.text!, description: descriptionText.text ?? "")
 			{ (error) in
 				if let error = error
@@ -24,6 +26,7 @@ class PostTableViewController: UITableViewController {
 					print(error)
 				}
 				self.reset()
+				self.spinner.stopAnimating()
 			}
 		}
 	}
