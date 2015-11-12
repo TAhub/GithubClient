@@ -202,6 +202,52 @@ class GithubService
 		}
 	}
 	
+	class func fetchUsers(searchTerm:String, completion:(String?, [User]?)->())
+	{
+		do
+		{
+			let token = try OAuthClient.shared.accessToken()
+			let urlString = "https://api.github.com/search/users?q=\(searchTerm)&access_token=\(token)"
+			
+			if let URL = NSURL(string: urlString)
+			{
+				let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+				
+				let request = NSMutableURLRequest(URL: URL)
+				request.HTTPMethod = "GET"
+				
+				session.dataTaskWithRequest(request, completionHandler:
+					{ (data, response, error) in
+					if let error = error
+					{
+						NSOperationQueue.mainQueue().addOperationWithBlock()
+						{
+							completion(error.description, nil)
+						}
+					}
+					else if let data = data, let users = GithubJSONParser.usersFromNSData(data)
+					{
+						NSOperationQueue.mainQueue().addOperationWithBlock()
+						{
+							completion(nil, users)
+						}
+					}
+					else
+					{
+						NSOperationQueue.mainQueue().addOperationWithBlock()
+						{
+							completion("ERROR: unable to parse JSON", nil)
+						}
+					}
+				}).resume()
+			}
+		}
+		catch let error
+		{
+			completion("\(error)", nil)
+		}
+	}
+	
 	class func fetchRepositories(searchTerm:String, completion:(String?, [Repository]?)->())
 	{
 		do

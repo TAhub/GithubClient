@@ -8,7 +8,9 @@
 
 import UIKit
 
-extension UIButton
+//yeah, this isn't an extension to button anymore
+//bite me
+extension UIView
 {
 	public func winterBorder()
 	{

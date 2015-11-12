@@ -26,6 +26,31 @@ class GithubJSONParser
 		return nil
 	}
 	
+	class func usersFromNSData(data: NSData) -> [User]?
+	{
+		do
+		{
+			let deserialized = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
+			if let rootObject = deserialized as? [String : AnyObject], let items = rootObject["items"] as? [[String : AnyObject]]
+			{
+				var users = [User]()
+				for item in items
+				{
+					if let user = userFromJSON(item)
+					{
+						users.append(user)
+					}
+				}
+				return users
+			}
+		}
+		catch
+		{
+			//there was an exception
+		}
+		return nil
+	}
+	
 	class func reposFromNSData(data: NSData) -> [Repository]?
 	{
 		do
@@ -66,8 +91,13 @@ class GithubJSONParser
 	
 	class func userFromJSON(json: [String : AnyObject]) -> User?
 	{
-		if let name = json["login"] as? String, let avatar = json["avatar_url"] as? String, let created = json["created_at"] as? String, let following = json["following"] as? Int, let followers = json["followers"] as? Int
+		if let name = json["login"] as? String, let avatar = json["avatar_url"] as? String
 		{
+			//these values are only provided when looking up your own info
+			let created = json["created_at"] as? String ?? "never"
+			let following = json["following"] as? Int ?? 0
+			let followers = json["followers"] as? Int ?? 0
+			
 			return User(name: name, avatar: avatar, followers: followers, starred: 0, following: following, created: created)
 		}
 		return nil
