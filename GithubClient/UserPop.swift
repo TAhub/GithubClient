@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserPop: NSObject, UIViewControllerAnimatedTransitioning
+class UserPop: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate
 {
 	@objc func animateTransition(transitionContext: UIViewControllerContextTransitioning)
 	{
@@ -43,6 +43,10 @@ class UserPop: NSObject, UIViewControllerAnimatedTransitioning
 				from.view.alpha = 0
 			}
 		}
+	}
+	
+	func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+		return self
 	}
 	
 	@objc func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval

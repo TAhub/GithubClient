@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserViewController: UIViewController, UICollectionViewDataSource, UISearchBarDelegate, UIViewControllerTransitioningDelegate {
+class UserViewController: UIViewController, UICollectionViewDataSource, UISearchBarDelegate {
 
 	@IBOutlet weak var collection: UICollectionView!
 	{
@@ -35,16 +35,11 @@ class UserViewController: UIViewController, UICollectionViewDataSource, UISearch
 		}
 	}
 	
-	let animation = UserPop()
-	func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-		return animation
-	}
-	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
 	{
 		if let dest = segue.destinationViewController as? UserDetailViewController, let sender = sender as? UserCollectionViewCell
 		{
-			dest.transitioningDelegate = self
+			dest.transitioningDelegate = UserPop()
 			
 			let indexPath = collection.indexPathForCell(sender)!
 			if let image = sender.image.image
