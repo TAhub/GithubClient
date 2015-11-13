@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserPop: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate
+class UserPop: NSObject, UIViewControllerAnimatedTransitioning
 {
 	@objc func animateTransition(transitionContext: UIViewControllerContextTransitioning)
 	{
@@ -18,8 +18,8 @@ class UserPop: NSObject, UIViewControllerAnimatedTransitioning, UIViewController
 		let bounds = UIScreen.mainScreen().bounds
 		
 		let colorRect = UIView(frame: bounds)
-		colorRect.backgroundColor = UIColor.blueColor()
 		colorRect.alpha = 0
+		colorRect.backgroundColor = UIColor.whiteColor()
 		container.addSubview(colorRect)
 		
 		//fade the color rect in
@@ -45,12 +45,8 @@ class UserPop: NSObject, UIViewControllerAnimatedTransitioning, UIViewController
 		}
 	}
 	
-	func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-		return self
-	}
-	
 	@objc func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval
 	{
-		return 2.5
+		return 0.75
 	}
 }

@@ -135,12 +135,12 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="mon-ov-PGx"/>
-                                <exclude reference="cZr-Jn-lsd"/>
                                 <exclude reference="QZO-RQ-RJh"/>
                                 <exclude reference="Vic-RL-Geq"/>
                                 <exclude reference="mPn-EZ-o7T"/>
                                 <exclude reference="rYB-uz-xeO"/>
                                 <exclude reference="rip-7m-f9f"/>
+                                <exclude reference="cZr-Jn-lsd"/>
                                 <exclude reference="gHG-pg-vZM"/>
                             </mask>
                         </variation>

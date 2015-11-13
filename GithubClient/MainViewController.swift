@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class MainViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
+class MainViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
 
 	@IBOutlet weak var searchBox: UISearchBar!
 	{
@@ -77,6 +77,17 @@ class MainViewController: UIViewController, UISearchBarDelegate, UITableViewData
 			let repo = searchResults[index.row]
 			dest.urlString = repo.homepage
 		}
+	}
+	
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		navigationController!.delegate = self
+	}
+	
+	let anim = UserPop()
+	func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+		return anim
 	}
 	
 	//MARK: table view data source
