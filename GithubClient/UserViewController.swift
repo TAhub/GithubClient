@@ -90,6 +90,13 @@ class UserViewController: UIViewController, UICollectionViewDataSource, UISearch
 					self.spinner.stopAnimating()
 			}
 		}
+		else
+		{
+			let alert = UIAlertController(title: "Bad search string!", message: "\(searchBar.text!) contains an invalid character!", preferredStyle: UIAlertControllerStyle.Alert)
+			let action = UIAlertAction(title: "Okay.", style: UIAlertActionStyle.Cancel, handler: nil)
+			alert.addAction(action)
+			presentViewController(alert, animated: true, completion: nil)
+		}
 	}
 	
 	func searchBarTextDidEndEditing(searchBar: UISearchBar)
