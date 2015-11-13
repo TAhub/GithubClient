@@ -75,6 +75,39 @@
             </objects>
             <point key="canvasLocation" x="1382" y="861"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="fTt-Gs-YYo">
+            <objects>
+                <viewController id="F2z-EQ-Awa" customClass="WebViewController" customModule="GithubClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9WG-d8-gMc"/>
+                        <viewControllerLayoutGuide type="bottom" id="vuj-cu-gWg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aYU-Uf-cgM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvZ-Y8-dgI">
+                                <rect key="frame" x="20" y="28" width="560" height="515"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mvZ-Y8-dgI" firstAttribute="leading" secondItem="aYU-Uf-cgM" secondAttribute="leadingMargin" id="QZO-RQ-RJh"/>
+                            <constraint firstItem="vuj-cu-gWg" firstAttribute="top" secondItem="mvZ-Y8-dgI" secondAttribute="bottom" constant="8" symbolic="YES" id="gHG-pg-vZM"/>
+                            <constraint firstItem="mvZ-Y8-dgI" firstAttribute="top" secondItem="9WG-d8-gMc" secondAttribute="bottom" constant="8" symbolic="YES" id="mPn-EZ-o7T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mvZ-Y8-dgI" secondAttribute="trailing" id="rYB-uz-xeO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="mvZ-Y8-dgI" id="mYO-wn-qkG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9M5-Eh-3Gu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2132" y="-1155"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -123,6 +156,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="F2z-EQ-Awa" kind="show" identifier="showWeb" trigger="accessoryAction" id="pfT-G3-1Yt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -149,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2132" y="861"/>
+            <point key="canvasLocation" x="2132" y="-491"/>
         </scene>
         <!--User Search-->
         <scene sceneID="upz-WS-Tjn">
@@ -288,8 +324,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="wZk-pT-iWq"/>
                                 <exclude reference="8Hb-YJ-b0q"/>
+                                <exclude reference="wZk-pT-iWq"/>
                             </mask>
                         </variation>
                     </view>

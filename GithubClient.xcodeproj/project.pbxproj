@@ -28,6 +28,7 @@
 		E4B8E97A1BF5542D00CC2C85 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8E9791BF5542D00CC2C85 /* UserCollectionViewCell.swift */; };
 		E4B8E97C1BF5580900CC2C85 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8E97B1BF5580900CC2C85 /* UserDetailViewController.swift */; };
 		E4B8E97E1BF55DF600CC2C85 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8E97D1BF55DF600CC2C85 /* StringExtension.swift */; };
+		E4B8E9821BF56D1100CC2C85 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8E9811BF56D1100CC2C85 /* WebViewController.swift */; };
 		E4D9B85A1BF3D0D300C43229 /* snowflake1.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8571BF3D0D300C43229 /* snowflake1.png */; };
 		E4D9B85B1BF3D0D300C43229 /* snowflake2.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8581BF3D0D300C43229 /* snowflake2.png */; };
 		E4D9B85C1BF3D0D300C43229 /* snowflake3.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8591BF3D0D300C43229 /* snowflake3.png */; };
@@ -58,6 +59,7 @@
 		E4B8E9791BF5542D00CC2C85 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		E4B8E97B1BF5580900CC2C85 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		E4B8E97D1BF55DF600CC2C85 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E4B8E9811BF56D1100CC2C85 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		E4D9B8571BF3D0D300C43229 /* snowflake1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake1.png; sourceTree = "<group>"; };
 		E4D9B8581BF3D0D300C43229 /* snowflake2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake2.png; sourceTree = "<group>"; };
 		E4D9B8591BF3D0D300C43229 /* snowflake3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake3.png; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		E46FF99E1BF2A08700E3097D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E4B8E9811BF56D1100CC2C85 /* WebViewController.swift */,
 				E4B8E9751BF5508100CC2C85 /* UserViewController.swift */,
 				E4B8E97B1BF5580900CC2C85 /* UserDetailViewController.swift */,
 				E47A6FCD1BF3EDE700136715 /* ProfileViewController.swift */,
@@ -233,6 +236,7 @@
 				E47A6FCC1BF3E54700136715 /* HomeTableViewController.swift in Sources */,
 				E4B8E9761BF5508100CC2C85 /* UserViewController.swift in Sources */,
 				E4B8E97C1BF5580900CC2C85 /* UserDetailViewController.swift in Sources */,
+				E4B8E9821BF56D1100CC2C85 /* WebViewController.swift in Sources */,
 				E46FF9971BF2A04E00E3097D /* Repository.swift in Sources */,
 				E428039E1BF1531B00174F37 /* MainViewController.swift in Sources */,
 				E46FF9951BF29F0100E3097D /* PostTableViewController.swift in Sources */,

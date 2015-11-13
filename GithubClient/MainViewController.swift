@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class MainViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource {
 
@@ -65,6 +66,16 @@ class MainViewController: UIViewController, UISearchBarDelegate, UITableViewData
 	func searchBarTextDidEndEditing(searchBar: UISearchBar)
 	{
 		searchBar.resignFirstResponder()
+	}
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+	{
+		if let dest = segue.destinationViewController as? WebViewController, let cell = sender as? UITableViewCell
+		{
+			let index = table!.indexPathForCell(cell)!
+			let repo = searchResults[index.row]
+			dest.urlString = repo.url
+		}
 	}
 	
 	//MARK: table view data source
