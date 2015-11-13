@@ -11,6 +11,9 @@ import WebKit
 
 class MainViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
 
+	//icon by
+	//http://www.flaticon.com/authors/freepik
+	
 	@IBOutlet weak var searchBox: UISearchBar!
 	{
 		didSet

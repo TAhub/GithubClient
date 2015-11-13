@@ -10,6 +10,9 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
 
+	//icon by
+	//http://www.flaticon.com/authors/simpleicon
+	
 	@IBOutlet weak var spinner: UIActivityIndicatorView!
 	
 	override func viewWillAppear(animated: Bool)

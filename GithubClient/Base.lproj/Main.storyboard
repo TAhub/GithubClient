@@ -156,7 +156,7 @@
             </objects>
             <point key="canvasLocation" x="2132" y="-1155"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Repo Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="GithubClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -221,7 +221,7 @@
                             <constraint firstItem="sh5-pW-stw" firstAttribute="top" secondItem="9W5-Jp-vny" secondAttribute="bottom" symbolic="YES" id="wGU-UC-0gF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="unr-28-LpJ"/>
+                    <tabBarItem key="tabBarItem" title="Repo Search" image="magnifier13" id="unr-28-LpJ"/>
                     <connections>
                         <outlet property="searchBox" destination="9W5-Jp-vny" id="eCq-sS-Tas"/>
                         <outlet property="spinner" destination="D5x-OI-AMw" id="ynf-gb-WK6"/>
@@ -304,7 +304,7 @@
                             <constraint firstItem="lwW-fh-UEZ" firstAttribute="leading" secondItem="NbK-4F-WZf" secondAttribute="leadingMargin" id="mLQ-Nn-3OC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="User Search" id="j0U-sC-HNq"/>
+                    <tabBarItem key="tabBarItem" title="User Search" image="multiple25" id="j0U-sC-HNq"/>
                     <connections>
                         <outlet property="collection" destination="lwW-fh-UEZ" id="RC6-bw-mHh"/>
                         <outlet property="searchBar" destination="XZS-U7-zy0" id="HTV-BM-Wd6"/>
@@ -386,7 +386,7 @@
             </objects>
             <point key="canvasLocation" x="2890" y="1577"/>
         </scene>
-        <!--Profile-->
+        <!--profile-->
         <scene sceneID="Q8W-hE-qFd">
             <objects>
                 <viewController id="Sji-x8-Ylh" customClass="ProfileViewController" customModule="GithubClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -488,7 +488,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="XxW-mv-m7U"/>
+                    <tabBarItem key="tabBarItem" title="profile" image="user7" id="XxW-mv-m7U"/>
                     <connections>
                         <outlet property="avatarView" destination="Ned-tn-yFQ" id="Nkk-r5-wX5"/>
                         <outlet property="followersLabel" destination="T0s-lk-Mbb" id="uho-LV-UoR"/>
@@ -542,7 +542,7 @@
                             <outlet property="delegate" destination="AUG-Q4-zWZ" id="HsZ-E9-qpj"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="My Repos" id="9b4-ZL-Gcj"/>
+                    <tabBarItem key="tabBarItem" title="My Repos" image="documents7" id="9b4-ZL-Gcj"/>
                     <connections>
                         <outlet property="spinner" destination="Q2u-rB-Xgj" id="cve-bE-ZmI"/>
                     </connections>
@@ -691,7 +691,7 @@
                             <outlet property="delegate" destination="so2-dd-zjg" id="Fty-ZP-V5z"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Create" id="Yer-bY-lKP"/>
+                    <tabBarItem key="tabBarItem" title="Create" image="document39" id="Yer-bY-lKP"/>
                     <connections>
                         <outlet property="descriptionText" destination="eyE-Jt-mwd" id="Rx3-1h-CSr"/>
                         <outlet property="nameText" destination="DQu-34-D2y" id="rZm-lG-duT"/>
@@ -727,4 +727,11 @@
             <point key="canvasLocation" x="2132" y="161"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="document39" width="64" height="64"/>
+        <image name="documents7" width="64" height="64"/>
+        <image name="magnifier13" width="64" height="64"/>
+        <image name="multiple25" width="32" height="32"/>
+        <image name="user7" width="64" height="64"/>
+    </resources>
 </document>

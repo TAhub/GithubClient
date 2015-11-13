@@ -10,6 +10,9 @@ import UIKit
 
 class PostTableViewController: UITableViewController {
 
+	//icon by
+	//http://www.flaticon.com/authors/freepik
+	
 	@IBOutlet weak var nameText: UITextField!
 	@IBOutlet weak var descriptionText: UITextField!
 	@IBOutlet weak var spinner: UIActivityIndicatorView!

@@ -10,6 +10,9 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+	//icon by
+	//http://www.flaticon.com/authors/bogdan-rosu
+	
 	@IBOutlet weak var avatarView: UIImageView!
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var joinedLabel: UILabel!

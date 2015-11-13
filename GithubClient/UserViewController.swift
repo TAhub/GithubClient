@@ -10,6 +10,9 @@ import UIKit
 
 class UserViewController: UIViewController, UICollectionViewDataSource, UISearchBarDelegate, UINavigationControllerDelegate {
 
+	//icon by
+	//http://www.flaticon.com/authors/freepik
+	
 	@IBOutlet weak var collection: UICollectionView!
 	{
 		didSet
