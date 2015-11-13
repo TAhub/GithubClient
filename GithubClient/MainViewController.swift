@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class MainViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
 
 	@IBOutlet weak var searchBox: UISearchBar!
 	{
@@ -25,6 +25,7 @@ class MainViewController: UIViewController, UISearchBarDelegate, UITableViewData
 		didSet
 		{
 			table.dataSource = self
+			table.delegate = self
 		}
 	}
 	
@@ -74,7 +75,7 @@ class MainViewController: UIViewController, UISearchBarDelegate, UITableViewData
 		{
 			let index = table!.indexPathForCell(cell)!
 			let repo = searchResults[index.row]
-			dest.urlString = repo.url
+			dest.urlString = repo.homepage
 		}
 	}
 	
@@ -89,5 +90,12 @@ class MainViewController: UIViewController, UISearchBarDelegate, UITableViewData
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 	{
 		return searchResults.count
+	}
+	
+	//MARK: table view delegate
+	func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath?
+	{
+		performSegueWithIdentifier("showWeb", sender: tableView.cellForRowAtIndexPath(indexPath)!)
+		return nil
 	}
 }

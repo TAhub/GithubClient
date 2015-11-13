@@ -19,6 +19,23 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 	}
 	var urlString:String!
 
+	@IBOutlet weak var urlBacker: UIView!
+	{
+		didSet
+		{
+			urlBacker.winterBorder()
+		}
+	}
+	
+	@IBOutlet weak var backButton: UIButton!
+	{
+		didSet
+		{
+			backButton.winterBorder()
+		}
+	}
+	
+	@IBOutlet weak var spinner: UIActivityIndicatorView!
 	
 	override func viewWillAppear(animated: Bool)
 	{
@@ -35,14 +52,23 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 		}
 	}
 	
-	private func die()
+	@IBAction private func die()
 	{
 		navigationController!.popViewControllerAnimated(true)
 	}
 	
 	//MARK: web view delegate
+	func webViewDidStartLoad(webView: UIWebView)
+	{
+		spinner.startAnimating()
+	}
+	func webViewDidFinishLoad(webView: UIWebView)
+	{
+		spinner.stopAnimating()
+	}
 	func webView(webView: UIWebView, didFailLoadWithError error: NSError?)
 	{
+		spinner.stopAnimating()
 		die()
 	}
 }

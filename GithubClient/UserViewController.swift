@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserViewController: UIViewController, UICollectionViewDataSource, UISearchBarDelegate {
+class UserViewController: UIViewController, UICollectionViewDataSource, UISearchBarDelegate, UIViewControllerTransitioningDelegate {
 
 	@IBOutlet weak var collection: UICollectionView!
 	{
@@ -35,10 +35,17 @@ class UserViewController: UIViewController, UICollectionViewDataSource, UISearch
 		}
 	}
 	
+	let animation = UserPop()
+	func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+		return animation
+	}
+	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
 	{
 		if let dest = segue.destinationViewController as? UserDetailViewController, let sender = sender as? UserCollectionViewCell
 		{
+			dest.transitioningDelegate = self
+			
 			let indexPath = collection.indexPathForCell(sender)!
 			if let image = sender.image.image
 			{
@@ -119,7 +126,7 @@ class UserViewController: UIViewController, UICollectionViewDataSource, UISearch
 					print("ERROR: failed to retrieve image at \(avatar)")
 				}
 			}
-	}
+		}
 		
 		return cell
 	}

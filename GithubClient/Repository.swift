@@ -15,4 +15,5 @@ struct Repository
 	var url:String
 	var id:Int
 	var owner:Owner
+	var homepage:String
 }

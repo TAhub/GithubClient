@@ -87,20 +87,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96Q-8q-2Dt">
+                                <rect key="frame" x="20" y="76" width="560" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvZ-Y8-dgI">
-                                <rect key="frame" x="20" y="28" width="560" height="515"/>
+                                <rect key="frame" x="30" y="86" width="540" height="447"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnm-nz-sBP">
+                                <rect key="frame" x="318" y="28" width="56" height="40"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="die" destination="F2z-EQ-Awa" eventType="touchUpInside" id="rq5-hq-QHR"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XmU-m7-waR">
+                                <rect key="frame" x="290" y="38" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="fnm-nz-sBP" firstAttribute="leading" secondItem="XmU-m7-waR" secondAttribute="trailing" constant="8" symbolic="YES" id="3PQ-sV-YkF"/>
+                            <constraint firstItem="XmU-m7-waR" firstAttribute="centerX" secondItem="aYU-Uf-cgM" secondAttribute="centerX" id="4EG-yM-MuL"/>
+                            <constraint firstItem="96Q-8q-2Dt" firstAttribute="width" secondItem="mvZ-Y8-dgI" secondAttribute="width" constant="20" id="B5F-LP-tPK"/>
+                            <constraint firstItem="96Q-8q-2Dt" firstAttribute="leading" secondItem="aYU-Uf-cgM" secondAttribute="leadingMargin" id="Ixp-KX-hWM"/>
+                            <constraint firstItem="96Q-8q-2Dt" firstAttribute="top" secondItem="fnm-nz-sBP" secondAttribute="bottom" constant="8" symbolic="YES" id="LM5-cp-gyy"/>
+                            <constraint firstItem="vuj-cu-gWg" firstAttribute="top" secondItem="96Q-8q-2Dt" secondAttribute="bottom" constant="8" symbolic="YES" id="MNh-Uf-cR6"/>
                             <constraint firstItem="mvZ-Y8-dgI" firstAttribute="leading" secondItem="aYU-Uf-cgM" secondAttribute="leadingMargin" id="QZO-RQ-RJh"/>
+                            <constraint firstItem="mvZ-Y8-dgI" firstAttribute="top" secondItem="fnm-nz-sBP" secondAttribute="bottom" constant="33" id="Vic-RL-Geq"/>
+                            <constraint firstItem="XmU-m7-waR" firstAttribute="top" secondItem="9WG-d8-gMc" secondAttribute="bottom" constant="8" symbolic="YES" id="cZr-Jn-lsd"/>
+                            <constraint firstItem="fnm-nz-sBP" firstAttribute="top" secondItem="9WG-d8-gMc" secondAttribute="bottom" constant="8" symbolic="YES" id="f2k-7t-hby"/>
                             <constraint firstItem="vuj-cu-gWg" firstAttribute="top" secondItem="mvZ-Y8-dgI" secondAttribute="bottom" constant="8" symbolic="YES" id="gHG-pg-vZM"/>
+                            <constraint firstItem="XmU-m7-waR" firstAttribute="centerY" secondItem="fnm-nz-sBP" secondAttribute="centerY" id="gL0-Th-RVx"/>
+                            <constraint firstItem="96Q-8q-2Dt" firstAttribute="centerX" secondItem="mvZ-Y8-dgI" secondAttribute="centerX" id="l6m-dY-HGC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="96Q-8q-2Dt" secondAttribute="trailing" id="mIK-mf-JKb"/>
                             <constraint firstItem="mvZ-Y8-dgI" firstAttribute="top" secondItem="9WG-d8-gMc" secondAttribute="bottom" constant="8" symbolic="YES" id="mPn-EZ-o7T"/>
+                            <constraint firstItem="96Q-8q-2Dt" firstAttribute="top" secondItem="XmU-m7-waR" secondAttribute="bottom" constant="8" symbolic="YES" id="mon-ov-PGx"/>
+                            <constraint firstItem="96Q-8q-2Dt" firstAttribute="height" secondItem="mvZ-Y8-dgI" secondAttribute="height" constant="20" id="oEU-nH-Z4R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mvZ-Y8-dgI" secondAttribute="trailing" id="rYB-uz-xeO"/>
+                            <constraint firstItem="mvZ-Y8-dgI" firstAttribute="top" secondItem="XmU-m7-waR" secondAttribute="bottom" constant="8" symbolic="YES" id="rip-7m-f9f"/>
+                            <constraint firstItem="96Q-8q-2Dt" firstAttribute="centerY" secondItem="mvZ-Y8-dgI" secondAttribute="centerY" id="wPY-p4-b4H"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mon-ov-PGx"/>
+                                <exclude reference="cZr-Jn-lsd"/>
+                                <exclude reference="QZO-RQ-RJh"/>
+                                <exclude reference="Vic-RL-Geq"/>
+                                <exclude reference="mPn-EZ-o7T"/>
+                                <exclude reference="rYB-uz-xeO"/>
+                                <exclude reference="rip-7m-f9f"/>
+                                <exclude reference="gHG-pg-vZM"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="fnm-nz-sBP" id="LYE-Pz-vI0"/>
+                        <outlet property="spinner" destination="XmU-m7-waR" id="AVw-Ew-wT5"/>
+                        <outlet property="urlBacker" destination="96Q-8q-2Dt" id="RJA-rk-8Q4"/>
                         <outlet property="webView" destination="mvZ-Y8-dgI" id="mYO-wn-qkG"/>
                     </connections>
                 </viewController>
@@ -156,9 +204,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <segue destination="F2z-EQ-Awa" kind="show" identifier="showWeb" trigger="accessoryAction" id="pfT-G3-1Yt"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -181,6 +226,7 @@
                         <outlet property="searchBox" destination="9W5-Jp-vny" id="eCq-sS-Tas"/>
                         <outlet property="spinner" destination="D5x-OI-AMw" id="ynf-gb-WK6"/>
                         <outlet property="table" destination="sh5-pW-stw" id="hVk-Ra-p5E"/>
+                        <segue destination="F2z-EQ-Awa" kind="show" identifier="showWeb" id="xh1-dx-dE5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

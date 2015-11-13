@@ -105,9 +105,9 @@ class GithubJSONParser
 	
 	class func repoFromJSON(json: [String : AnyObject]) -> Repository?
 	{
-		if let name = json["name"] as? String, let fullName = json["full_name"] as? String, let url = json["url"] as? String, let ownerJSON = json["owner"] as? [String : AnyObject], let owner = ownerFromJSON(ownerJSON), let id = json["id"] as? Int
+		if let name = json["name"] as? String, let fullName = json["full_name"] as? String, let url = json["url"] as? String, let ownerJSON = json["owner"] as? [String : AnyObject], let owner = ownerFromJSON(ownerJSON), let id = json["id"] as? Int, let homepage = json["html_url"] as? String
 		{
-			return Repository(name: name, fullName: fullName, url: url, id: id, owner: owner)
+			return Repository(name: name, fullName: fullName, url: url, id: id, owner: owner, homepage: homepage)
 		}
 		return nil
 	}

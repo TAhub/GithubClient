@@ -29,6 +29,7 @@
 		E4B8E97C1BF5580900CC2C85 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8E97B1BF5580900CC2C85 /* UserDetailViewController.swift */; };
 		E4B8E97E1BF55DF600CC2C85 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8E97D1BF55DF600CC2C85 /* StringExtension.swift */; };
 		E4B8E9821BF56D1100CC2C85 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8E9811BF56D1100CC2C85 /* WebViewController.swift */; };
+		E4B8E9841BF57D9100CC2C85 /* UserPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8E9831BF57D9100CC2C85 /* UserPop.swift */; };
 		E4D9B85A1BF3D0D300C43229 /* snowflake1.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8571BF3D0D300C43229 /* snowflake1.png */; };
 		E4D9B85B1BF3D0D300C43229 /* snowflake2.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8581BF3D0D300C43229 /* snowflake2.png */; };
 		E4D9B85C1BF3D0D300C43229 /* snowflake3.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8591BF3D0D300C43229 /* snowflake3.png */; };
@@ -60,6 +61,7 @@
 		E4B8E97B1BF5580900CC2C85 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		E4B8E97D1BF55DF600CC2C85 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E4B8E9811BF56D1100CC2C85 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		E4B8E9831BF57D9100CC2C85 /* UserPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPop.swift; sourceTree = "<group>"; };
 		E4D9B8571BF3D0D300C43229 /* snowflake1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake1.png; sourceTree = "<group>"; };
 		E4D9B8581BF3D0D300C43229 /* snowflake2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake2.png; sourceTree = "<group>"; };
 		E4D9B8591BF3D0D300C43229 /* snowflake3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake3.png; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		E46FF99D1BF2A08300E3097D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E4B8E9831BF57D9100CC2C85 /* UserPop.swift */,
 				E47A6FCF1BF3FE8100136715 /* ButtonExtension.swift */,
 				E428038C1BF1459B00174F37 /* Main.storyboard */,
 				E4B8E9771BF552A800CC2C85 /* UsersFlowLayout.swift */,
@@ -246,6 +249,7 @@
 				E4B8E9781BF552A800CC2C85 /* UsersFlowLayout.swift in Sources */,
 				E47A6FD01BF3FE8100136715 /* ButtonExtension.swift in Sources */,
 				E4B8E97A1BF5542D00CC2C85 /* UserCollectionViewCell.swift in Sources */,
+				E4B8E9841BF57D9100CC2C85 /* UserPop.swift in Sources */,
 				E46FF9991BF2A05600E3097D /* User.swift in Sources */,
 				E42803A01BF160E700174F37 /* GithubService.swift in Sources */,
 				E4ED7C751BF297F30062CA1C /* LoginViewController.swift in Sources */,
