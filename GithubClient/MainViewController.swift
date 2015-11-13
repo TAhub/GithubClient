@@ -42,20 +42,23 @@ class MainViewController: UIViewController, UISearchBarDelegate, UITableViewData
 
 	func searchBarSearchButtonClicked(searchBar: UISearchBar)
 	{
-		spinner.startAnimating()
-		
-		//search for the given thing
-		GithubService.fetchRepositories(searchBar.text!)
-		{ (error, results) in
-			if let error = error
-			{
-				print(error)
+		if searchBar.text!.isSafeToSearch
+		{
+			spinner.startAnimating()
+			
+			//search for the given thing
+			GithubService.fetchRepositories(searchBar.text!)
+			{ (error, results) in
+				if let error = error
+				{
+					print(error)
+				}
+				else
+				{
+					self.searchResults = results ?? [Repository]()
+				}
+				self.spinner.stopAnimating()
 			}
-			else
-			{
-				self.searchResults = results ?? [Repository]()
-			}
-			self.spinner.stopAnimating()
 		}
 	}
 	

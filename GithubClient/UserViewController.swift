@@ -58,20 +58,23 @@ class UserViewController: UIViewController, UICollectionViewDataSource, UISearch
 	//MARK: search bar delegate
 	func searchBarSearchButtonClicked(searchBar: UISearchBar)
 	{
-		spinner.startAnimating()
-		
-		//search for the given thing
-		GithubService.fetchUsers(searchBar.text!)
-			{ (error, results) in
-				if let error = error
-				{
-					print(error)
-				}
-				else
-				{
-					self.searchResults = results ?? [User]()
-				}
-				self.spinner.stopAnimating()
+		if searchBar.text!.isSafeToSearch
+		{
+			spinner.startAnimating()
+			
+			//search for the given thing
+			GithubService.fetchUsers(searchBar.text!)
+				{ (error, results) in
+					if let error = error
+					{
+						print(error)
+					}
+					else
+					{
+						self.searchResults = results ?? [User]()
+					}
+					self.spinner.stopAnimating()
+			}
 		}
 	}
 	

@@ -27,6 +27,7 @@
 		E4B8E9781BF552A800CC2C85 /* UsersFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8E9771BF552A800CC2C85 /* UsersFlowLayout.swift */; };
 		E4B8E97A1BF5542D00CC2C85 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8E9791BF5542D00CC2C85 /* UserCollectionViewCell.swift */; };
 		E4B8E97C1BF5580900CC2C85 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8E97B1BF5580900CC2C85 /* UserDetailViewController.swift */; };
+		E4B8E97E1BF55DF600CC2C85 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8E97D1BF55DF600CC2C85 /* StringExtension.swift */; };
 		E4D9B85A1BF3D0D300C43229 /* snowflake1.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8571BF3D0D300C43229 /* snowflake1.png */; };
 		E4D9B85B1BF3D0D300C43229 /* snowflake2.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8581BF3D0D300C43229 /* snowflake2.png */; };
 		E4D9B85C1BF3D0D300C43229 /* snowflake3.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D9B8591BF3D0D300C43229 /* snowflake3.png */; };
@@ -56,6 +57,7 @@
 		E4B8E9771BF552A800CC2C85 /* UsersFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersFlowLayout.swift; sourceTree = "<group>"; };
 		E4B8E9791BF5542D00CC2C85 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		E4B8E97B1BF5580900CC2C85 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		E4B8E97D1BF55DF600CC2C85 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E4D9B8571BF3D0D300C43229 /* snowflake1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake1.png; sourceTree = "<group>"; };
 		E4D9B8581BF3D0D300C43229 /* snowflake2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake2.png; sourceTree = "<group>"; };
 		E4D9B8591BF3D0D300C43229 /* snowflake3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake3.png; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		E46FF99C1BF2A07F00E3097D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4B8E97D1BF55DF600CC2C85 /* StringExtension.swift */,
 				E46FF9981BF2A05600E3097D /* User.swift */,
 				E46FF99A1BF2A06300E3097D /* Owner.swift */,
 				E46FF9961BF2A04E00E3097D /* Repository.swift */,
@@ -243,6 +246,7 @@
 				E42803A01BF160E700174F37 /* GithubService.swift in Sources */,
 				E4ED7C751BF297F30062CA1C /* LoginViewController.swift in Sources */,
 				E47A6FCE1BF3EDE700136715 /* ProfileViewController.swift in Sources */,
+				E4B8E97E1BF55DF600CC2C85 /* StringExtension.swift in Sources */,
 				E42803891BF1459B00174F37 /* AppDelegate.swift in Sources */,
 				E46FF9A11BF2A0FC00E3097D /* GithubJSONParser.swift in Sources */,
 			);
