@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController, UINavigationControllerDelegate {
 
 	//icon by
 	//http://www.flaticon.com/authors/simpleicon
@@ -32,6 +32,8 @@ class HomeTableViewController: UITableViewController {
 			}
 			self.spinner.stopAnimating()
 		}
+		
+		navigationController!.delegate = self
 	}
 
     // MARK: - Table view data source
@@ -59,4 +61,27 @@ class HomeTableViewController: UITableViewController {
 		cell.textLabel!.text = repos[indexPath.row].name
         return cell
     }
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+	{
+		if let dest = segue.destinationViewController as? WebViewController, let cell = sender as? UITableViewCell
+		{
+			let index = tableView.indexPathForCell(cell)!
+			let repo = repos[index.row]
+			dest.urlString = repo.homepage
+		}
+	}
+	
+	//MARK: table view delegate
+	override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath?
+	{
+		performSegueWithIdentifier("showWeb", sender: tableView.cellForRowAtIndexPath(indexPath)!)
+		return nil
+	}
+	
+	//MARK: navigation controller delegate
+	let anim = UserPop()
+	func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+		return anim
+	}
 }

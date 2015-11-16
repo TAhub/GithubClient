@@ -545,6 +545,7 @@
                     <tabBarItem key="tabBarItem" title="My Repos" image="documents7" id="9b4-ZL-Gcj"/>
                     <connections>
                         <outlet property="spinner" destination="Q2u-rB-Xgj" id="cve-bE-ZmI"/>
+                        <segue destination="F2z-EQ-Awa" kind="show" identifier="showWeb" id="nDd-iL-imv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUE-LV-4gG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -728,10 +729,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="document39" width="64" height="64"/>
-        <image name="documents7" width="64" height="64"/>
-        <image name="magnifier13" width="64" height="64"/>
+        <image name="document39" width="32" height="32"/>
+        <image name="documents7" width="32" height="32"/>
+        <image name="magnifier13" width="32" height="32"/>
         <image name="multiple25" width="32" height="32"/>
-        <image name="user7" width="64" height="64"/>
+        <image name="user7" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="nDd-iL-imv"/>
+    </inferredMetricsTieBreakers>
 </document>
